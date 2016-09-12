@@ -1,0 +1,15 @@
+/*  usage of  preprocessor directives -> #define and #undef
+*/
+
+#include <stdio.h>
+#define hello (23+23) //defining a macro variable hello
+#undef hello    // removing the macro specified- "hello"
+int main(void) {
+
+    #ifdef hello    // checking if a macro hello is defined
+    printf("the sum is : %d \n" , hello);  //this statement is evaluated only if the macro is found by #ifdef
+    #endif   //end of  if condition
+    
+    printf("This is the actual output");    //to check execution without using the macros 
+    return 0;
+}
